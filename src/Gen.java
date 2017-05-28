@@ -1,4 +1,4 @@
-public class Gen<T> {
+public class Gen<T extends Number> {
 
     T array[];
 
@@ -15,4 +15,15 @@ public class Gen<T> {
                 array[0]);
     }
 
+    void minValue() {
+        double min = array[0].doubleValue();
+        for (int i = 0; i < array.length; i++) {
+                if (array[i].doubleValue() < min) {
+                    min = array[i].doubleValue();
+                }
+            }
+        System.out.println("first index of array is : " +
+                min);
+        }
 }
+
